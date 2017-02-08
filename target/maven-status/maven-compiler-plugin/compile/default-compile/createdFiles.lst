@@ -1,0 +1,7 @@
+beans\Appointment.class
+beans\Doctor.class
+beans\Patient.class
+beans\Admin.class
+beans\Mail.class
+beans\dBase.class
+servlets\ControlServlet.class
