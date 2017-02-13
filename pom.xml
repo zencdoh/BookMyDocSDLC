@@ -22,10 +22,54 @@
 
      
      </dependencies>
+     <!-- Adding code for profiles environment -->
+     <profiles>
+    <profile>
+        <id>DEV</id>
+        <properties>
+            <db.tablename>DEV.PERSON</db.tablename>
+            <db.username>DEV_USERNAME</db.username>
+            <db.password>DEV_PASSWORD</db.password>
+        </properties>
+    </profile>
+    <profile>
+        <id>QA</id>
+        <properties>
+            <db.tablename>QA.PERSON</db.tablename>
+            <db.username>QA_USERNAME</db.username>
+            <db.password>QA_PASSWORD</db.password>
+        </properties>
+    </profile>
+    <profile>
+        <id>PROD</id>
+        <properties>
+            <db.tablename>PROD.PERSON</db.tablename>
+            <db.username>PROD_USERNAME</db.username>
+            <db.password>PROD_PASSWORD</db.password>
+        </properties>
+    </profile>
+</profiles>
+    <!-- Ending code for profiles environment -->
+     
   <build>
     <sourceDirectory>src</sourceDirectory>
-    
+    <resources>
+        <resource>
+            <directory>src</directory>
+            <filtering>true</filtering>
+        </resource>
+    </resources>
     <plugins>
+    <!-- start code for profiles environment -->
+     <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-resources-plugin</artifactId>
+    <version>2.4</version>
+    <configuration>
+        <encoding>UTF-8</encoding>
+    </configuration>
+</plugin> 
+  <!-- Ending code for profiles environment -->
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.3</version>
