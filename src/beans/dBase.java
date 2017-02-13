@@ -20,7 +20,7 @@ public class dBase {
 				//"jdbc:mysql://35.166.130.227:3306/book_my_doc", "root", "root");
 		String URL = "$URL";
                 String USER = "$USER";
-                String PASS = "$PASS"
+                String PASS = "$PASS";
                 Connection connection  = DriverManager.getConnection(URL, USER, PASS);
 		//connection = DriverManager.getConnection(
 				//"jdbc:mysql://35.166.130.227:3306/book_my_doc", "root", "root");
