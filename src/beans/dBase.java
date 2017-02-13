@@ -21,7 +21,7 @@ public class dBase {
 		String URL = "$URL";
                 String USER = "$USER";
                 String PASS = "$PASS"
-                Connection conn = DriverManager.getConnection(URL, USER, PASS);
+                Connection connection  = DriverManager.getConnection(URL, USER, PASS);
 		//connection = DriverManager.getConnection(
 				//"jdbc:mysql://35.166.130.227:3306/book_my_doc", "root", "root");
 		statement = connection.createStatement();
