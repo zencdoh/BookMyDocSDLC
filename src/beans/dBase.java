@@ -17,7 +17,7 @@ public class dBase {
 	public void createConn() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
 		connection = DriverManager.getConnection(
-				"jdbc:mysql://35.165.86.112:3306/book_my_doc", "root", "root");
+				"jdbc:mysql://35.166.130.227:3306/book_my_doc", "root", "root");
 		statement = connection.createStatement();
 	}
 
