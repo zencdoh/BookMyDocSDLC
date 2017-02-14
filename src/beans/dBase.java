@@ -5,7 +5,6 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Map;
 
 
 public class dBase {
@@ -18,12 +17,6 @@ public class dBase {
 
 	public void createConn() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
-		Map<String, String> env = System.getenv();
-                for (String envName : env.keySet()) {
-                       System.out.format("%s=%s%n",
-                              envName,
-                              env.get(envName));
-
 		//connection = DriverManager.getConnection(
 				//"jdbc:mysql://35.166.130.227:3306/book_my_doc", "root", "root");
 		String URL = ${URL};
