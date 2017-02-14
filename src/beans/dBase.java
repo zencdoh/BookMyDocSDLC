@@ -25,9 +25,10 @@ public class dBase {
 		String URL = System.getProperty("URL");
 		String USER = System.getProperty("USER");
 		String PASS = System.getProperty("PASS");
-		System.out.println(URL);
-		System.out.println(USER);
-		System.out.println(PASS);
+		System.out.println("Printing values");
+		System.out.println("url"+URL);
+		System.out.println("user"+USER);
+		System.out.println("password"+PASS);
                 Connection connection  = DriverManager.getConnection(URL,USER,PASS);
 		//connection = DriverManager.getConnection(
 				//"jdbc:mysql://35.166.130.227:3306/book_my_doc", "root", "root");
