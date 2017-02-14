@@ -18,9 +18,9 @@ public class dBase {
 		Class.forName("com.mysql.jdbc.Driver");
 		//connection = DriverManager.getConnection(
 				//"jdbc:mysql://35.166.130.227:3306/book_my_doc", "root", "root");
-		String URL = "$URL";
-                String USER = "$USER";
-                String PASS = "$PASS";
+		String URL = ${URL};
+                String USER = ${USER};
+                String PASS = ${PASS};
 		System.out.println(URL);
 		System.out.println(USER);
 		System.out.println(PASS);
