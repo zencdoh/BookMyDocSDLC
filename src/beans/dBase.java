@@ -23,8 +23,8 @@ public class dBase {
                 //String USER = ${USER};
                 //String PASS = ${PASS};
 		String URL = System.getenv("URL");
-		String URL = System.getenv("USER");
-		String URL = System.getenv("PASS");
+		String USER = System.getenv("USER");
+		String PASS = System.getenv("PASS");
 		System.out.println(URL);
 		System.out.println(USER);
 		System.out.println(PASS);
