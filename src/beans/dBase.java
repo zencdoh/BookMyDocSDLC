@@ -27,7 +27,7 @@ public class dBase {
 		String USER = System.getProperty("USER");
 		String PASS = System.getProperty("PASS");
 		System.out.println("Printing values");
-		System.out.println("tempVar"+CISCO);
+		System.out.println("tempVar"+tempVar);
 		System.out.println("url"+URL);
 		System.out.println("user"+USER);
 		System.out.println("password"+PASS);
