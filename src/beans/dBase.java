@@ -72,7 +72,14 @@ public class dBase {
 	}
 
 	public void closeConn() throws SQLException {
+		//statement.close();
+		//connection.close();
+	//}
 		statement.close();
-		connection.close();
-	}
+		//connection.close();
+		if (connection != null) {
+			connection.close();
+		}	
+		}
+
 }
