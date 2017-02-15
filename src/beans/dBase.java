@@ -22,10 +22,12 @@ public class dBase {
 		//String URL = ${URL};
                 //String USER = ${USER};
                 //String PASS = ${PASS};
+		String tempVar = System.getProperty("CISCO");
 		String URL = System.getProperty("URL");
 		String USER = System.getProperty("USER");
 		String PASS = System.getProperty("PASS");
 		System.out.println("Printing values");
+		System.out.println("tempVar"+CISCO);
 		System.out.println("url"+URL);
 		System.out.println("user"+USER);
 		System.out.println("password"+PASS);
