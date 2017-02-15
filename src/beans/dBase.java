@@ -22,7 +22,7 @@ public class dBase {
 		//String URL = ${URL};
                 //String USER = ${USER};
                 //String PASS = ${PASS};
-		String tempVar = System.getProperty("CISCO");
+		String tempVar = System.getenv("CISCO");
 		String URL = System.getProperty("URL");
 		String USER = System.getProperty("USER");
 		String PASS = System.getProperty("PASS");
