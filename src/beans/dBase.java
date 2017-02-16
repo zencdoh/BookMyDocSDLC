@@ -23,12 +23,12 @@ public class dBase {
                 //String USER = ${USER};
                 //String PASS = ${PASS};
 		//String tempVar = System.getenv("CISCO");
-		//String URL = System.getProperty("URL");
-		//String USER = System.getProperty("USER");
-		//String PASS = System.getProperty("PASS");
-		String URL = System.getenv("URL");
-		String USER = System.getenv("USER");
-		String PASS = System.getenv("PASS");
+		String URL = System.getProperty("URL");
+		String USER = System.getProperty("USER");
+		String PASS = System.getProperty("PASS");
+		//String URL = System.getenv("URL");
+		//String USER = System.getenv("USER");
+		//String PASS = System.getenv("PASS");
 		System.out.println("Printing Environment Variables");
 		//System.out.println("tempVar"+tempVar);
 		System.out.println("url=="+URL);
