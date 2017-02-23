@@ -13,7 +13,7 @@
 <div id="maincontainer">
 
 <div id="header">
-<h1>Doctor's Online</h1>
+<h1>ZenSar Doctor's Online</h1>
 <span>An Online Appointment Booking System</span>
 </div>
 
