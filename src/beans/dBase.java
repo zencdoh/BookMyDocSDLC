@@ -17,24 +17,24 @@ public class dBase {
 
 	public void createConn() throws ClassNotFoundException, SQLException {
 		Class.forName("com.mysql.jdbc.Driver");
-		//connection = DriverManager.getConnection(
-				//"jdbc:mysql://35.166.130.227:3306/book_my_doc", "root", "root");
+		connection = DriverManager.getConnection(
+				"jdbc:mysql://52.37.29.122:3306/book_my_doc", "root", "root");
 		//String URL = ${URL};
                 //String USER = ${USER};
                 //String PASS = ${PASS};
 		//String tempVar = System.getenv("CISCO");
-		String URL = System.getProperty("URL");
-		String USER = System.getProperty("USER");
-		String PASS = System.getProperty("PASS");
+		//String URL = System.getProperty("URL");
+		//String USER = System.getProperty("USER");
+		//String PASS = System.getProperty("PASS");
 		//String URL = System.getenv("URL");
 		//String USER = System.getenv("USER");
 		//String PASS = System.getenv("PASS");
-		System.out.println("Printing Environment Variables");
+		//System.out.println("Printing Environment Variables");
 		//System.out.println("tempVar"+tempVar);
-		System.out.println("url=="+URL);
-		System.out.println("user=="+USER);
-		System.out.println("password=="+PASS);
-                Connection connection  = DriverManager.getConnection(URL,USER,PASS);
+		//System.out.println("url=="+URL);
+		//System.out.println("user=="+USER);
+		//System.out.println("password=="+PASS);
+                //Connection connection  = DriverManager.getConnection(URL,USER,PASS);
 		System.out.println("ConnectionObject"+connection);
 		//connection = DriverManager.getConnection(
 				//"jdbc:mysql://35.166.130.227:3306/book_my_doc", "root", "root");
