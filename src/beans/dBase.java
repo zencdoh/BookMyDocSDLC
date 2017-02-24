@@ -40,7 +40,7 @@ public class dBase {
 		
 		System.out.println("***Adding NEw *******");
 		Properties props = new Properties();
-		FileInputStream in = new FileInputStream("/root/.jenkins/db.properties");
+		FileInputStream in = new FileInputStream("../db.properties");
 		props.load(in);
 		in.close();
 
