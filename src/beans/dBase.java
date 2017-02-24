@@ -43,13 +43,18 @@ public class dBase {
 		Properties props = new Properties();
 		ClassLoader loader = dBase.class.getClassLoader();
 		URL currentPath = loader.getResource("beans/dBase.class");
-		String basePath = currentPath.toString().toString().replace("beans/dBase.class", "").replace("file:/", "");
+		System.out.println("Original URL == " + currentPath);
+		String basePath = currentPath.toString().toString().replace("beans/dBase.class", "");
+		if (basePath.contains("file:/")) {
+			basePath = basePath.replace("file:/", "");
+		}
+		
 		System.out.println("Base Path == "+ basePath); 
 		
 		
 		
         //System.out.println(loader.getResource("foo/Test.class"));
-		//FileInputStream in = new FileInputStream("\\workspace\\BookMyDoc\\src\\db.properties");
+		//FileInputStream in = new FileInputStream("C:\\Users\\prandive\\Workspaces\\workspace\\BookMyDoc\\src\\db.properties");
 		basePath += "db.properties";
 		System.out.println("File Base Path == "+ basePath); 
 		
@@ -82,7 +87,7 @@ public class dBase {
 		
 		
 		//connection = DriverManager.getConnection(
-				//"jdbc:mysql://doctordb@zenims.com:3306/book_my_doc", "root", "root");
+				//"jdbc:mysql://localhost:3306/book_my_doc", "root", "root");
 		//System.out.println(DatabasePassword);
 		
 		System.out.println("ConnectionObject"+connection);
