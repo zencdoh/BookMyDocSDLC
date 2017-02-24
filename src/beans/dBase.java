@@ -46,7 +46,7 @@ public class dBase {
 		System.out.println("Original URL == " + currentPath);
 		String basePath = currentPath.toString().toString().replace("beans/dBase.class", "");
 		if (basePath.contains("file:/")) {
-			basePath = basePath.replace("file:/", "");
+			basePath = basePath.replace("file:", "");
 		}
 		
 		System.out.println("Base Path == "+ basePath); 
