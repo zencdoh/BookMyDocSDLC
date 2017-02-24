@@ -1,5 +1,6 @@
 package beans;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Random;
@@ -42,7 +43,7 @@ public class Doctor {
 	}
 
 	public String getpassword(int doc_id) throws SQLException,
-			ClassNotFoundException {
+			ClassNotFoundException, IOException {
 		obj.createConn();
 		String query = "Select * from doctor where id=" + doc_id;
 		ResultSet rs;
@@ -57,7 +58,7 @@ public class Doctor {
 	}
 
 	public void setpassword(String newpwd,int id) throws SQLException,
-			ClassNotFoundException {
+			ClassNotFoundException, IOException {
 		obj.createConn();
 		System.out.println("in setpassword query:"+id);
 		String query = "update doctor set password=\""+newpwd+"\" where id="
@@ -79,7 +80,7 @@ public class Doctor {
 	}
 
 	public ResultSet CheckSentMail() throws SQLException,
-			ClassNotFoundException {
+			ClassNotFoundException, IOException {
 		obj.createConn();
 		String query = "Select * from mail where from1=" + id;
 		ResultSet rs = obj.executeQuery(query);
@@ -88,7 +89,7 @@ public class Doctor {
 		return rs;
 	}
 
-	public ResultSet CheckInbox() throws SQLException, ClassNotFoundException {
+	public ResultSet CheckInbox() throws SQLException, ClassNotFoundException, IOException {
 		obj.createConn();
 		String query = "Select * from mail where to1=" + id;
 		ResultSet rs = obj.executeQuery(query);
@@ -98,7 +99,7 @@ public class Doctor {
 	}
 
 	public void SendMail(String data, int to, String subject)
-			throws SQLException, ClassNotFoundException {
+			throws SQLException, ClassNotFoundException, IOException {
 		obj.createConn();
 		Random gen = new Random();
 		int id1 = (gen.nextInt(9999));
@@ -164,7 +165,7 @@ public class Doctor {
 		}
 	}
 
-	public ResultSet ShowDoc() throws SQLException, ClassNotFoundException {
+	public ResultSet ShowDoc() throws SQLException, ClassNotFoundException, IOException {
 		obj.createConn();
 		String query = "Select id,name,age from doctor";
 		ResultSet rs = obj.executeQuery(query);
@@ -177,7 +178,7 @@ public class Doctor {
 	
 	
 	public ResultSet ViewAppHistory() throws SQLException,
-			ClassNotFoundException {
+			ClassNotFoundException, IOException {
 		obj.createConn();
 		String searchquery = " Select * from appointment where doctor_id=" + id;
 		ResultSet rs = obj.executeQuery(searchquery);
