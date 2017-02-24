@@ -1,5 +1,6 @@
 package beans;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Random;
@@ -54,7 +55,7 @@ public class Patient {
 	}
 
 	public void SetPassword(String password,int id) throws SQLException,
-			ClassNotFoundException {
+			ClassNotFoundException, IOException {
 		obj.createConn();
 		String query = "update patient set p_password=\"" + password
 				+ "\" where id=" + id;
@@ -90,7 +91,7 @@ public class Patient {
 	}
 
 	public ResultSet ViewAppHistory() throws SQLException,
-			ClassNotFoundException {
+			ClassNotFoundException, IOException {
 		obj.createConn();
 		String searchquery = " Select * from appointment where doc_id=" + id;
 		ResultSet rs = obj.executeQuery(searchquery);
@@ -115,7 +116,7 @@ public class Patient {
 	}
 
 	public int BookAppointment(String date1, String slot, int docid,
-			String problemtype) throws SQLException, ClassNotFoundException {
+			String problemtype) throws SQLException, ClassNotFoundException, IOException {
 		
 		System.out.println("@@@@"+date1);
 		System.out.println("@@@@"+slot);
@@ -167,7 +168,7 @@ public class Patient {
 	}
 
 	public ResultSet SearchDoctors(String problemtype) throws SQLException,
-			ClassNotFoundException {
+			ClassNotFoundException, IOException {
 		obj.createConn();
 		String query = "Select name,id,type from doctor where type='"
 				+ problemtype + "'";
@@ -178,7 +179,7 @@ public class Patient {
 	}
 
 	public ResultSet CheckSentMail() throws SQLException,
-			ClassNotFoundException {
+			ClassNotFoundException, IOException {
 		obj.createConn();
 		String query = "Select * from mail where from1=" + id;
 		ResultSet rs = obj.executeQuery(query);
@@ -191,7 +192,7 @@ public class Patient {
 		return rs;
 	}
 
-	public ResultSet CheckInbox() throws SQLException, ClassNotFoundException {
+	public ResultSet CheckInbox() throws SQLException, ClassNotFoundException, IOException {
 		obj.createConn();
 		String query = "Select * from mail where to1=" + id;
 		ResultSet rs = obj.executeQuery(query);
@@ -201,7 +202,7 @@ public class Patient {
 	}
 
 	public void SendMail(String data, int to, String subject)
-			throws SQLException, ClassNotFoundException {
+			throws SQLException, ClassNotFoundException, IOException {
 		obj.createConn();
 		Random gen = new Random();
 		int id1 = (gen.nextInt(9999));
