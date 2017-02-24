@@ -40,7 +40,15 @@ public class dBase {
 		
 		System.out.println("***Adding NEw *******");
 		Properties props = new Properties();
-		FileInputStream in = new FileInputStream("../db.properties");
+		ClassLoader loader = dBase.class.getClassLoader();
+		URL currentPath = loader.getResource("beans/dBase.class");
+		String basePath = currentPath.toString().toString().replace("beans/dBase.class", "").replace("file:/", "");
+		System.out.println("Base Path == "+ basePath); 
+		//FileInputStream in = new FileInputStream("C:\\Users\\prandive\\Workspaces\\workspace\\BookMyDoc\\src\\db.properties");
+		basePath += "db.properties";
+		System.out.println("File Base Path == "+ basePath); 
+		
+		FileInputStream in = new FileInputStream(basePath);
 		props.load(in);
 		in.close();
 
@@ -48,7 +56,6 @@ public class dBase {
 		if (driver != null) {
 		    Class.forName(driver) ;
 		}
-
 		String url = props.getProperty("jdbc.url");
 		String username = props.getProperty("jdbc.username");
 		String password = props.getProperty("jdbc.password");
