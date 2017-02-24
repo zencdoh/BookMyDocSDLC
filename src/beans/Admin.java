@@ -1,5 +1,6 @@
 package beans;
 
+import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Random;
@@ -38,7 +39,7 @@ public class Admin {
 	}
 
 	public void setpassword(String newpwd,int id) throws SQLException,
-			ClassNotFoundException {
+			ClassNotFoundException, IOException {
 		dbConnection.createConn();
 		System.out.println("A_id:"+id);
 		String query = "update admin set a_password=\"" + newpwd + "\" where id=" + id;
@@ -46,7 +47,7 @@ public class Admin {
 		dbConnection.closeConn();
 	}
 
-	public int CreateDoc() throws SQLException, ClassNotFoundException {
+	public int CreateDoc() throws SQLException, ClassNotFoundException, IOException {
 		dbConnection.createConn();
 		Random gen = new Random();
 		int pin = (gen.nextInt(9999));
@@ -67,7 +68,7 @@ public class Admin {
 		return pin;
 	}
 
-	public ResultSet ShowDoc() throws SQLException, ClassNotFoundException {
+	public ResultSet ShowDoc() throws SQLException, ClassNotFoundException, IOException {
 		dbConnection.createConn();
 		String query = "Select id,name,age from doctor";
 		ResultSet rs = dbConnection.executeQuery(query);
@@ -77,7 +78,7 @@ public class Admin {
 		return rs;
 	}
 
-	public ResultSet ShowPatient() throws SQLException, ClassNotFoundException {
+	public ResultSet ShowPatient() throws SQLException, ClassNotFoundException, IOException {
 		dbConnection.createConn();
 		String query = "Select id,p_name,p_age from patient";
 		ResultSet rs = dbConnection.executeQuery(query);
