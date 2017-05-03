@@ -70,7 +70,9 @@ public class dBase {
 		String url = props.getProperty("jdbc.url");
 		String username = props.getProperty("jdbc.username");
 		String password = props.getProperty("jdbc.password");
-
+		System.out.println("New URL == "+url);
+		System.out.println("New username == "+username);
+		System.out.println("New URL == "+password);
 		Connection connection = DriverManager.getConnection(url, username, password);
 		System.out.println("***Ending NEw *******");
 		/*//String URL = System.getProperty("URL");
