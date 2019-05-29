@@ -8,7 +8,7 @@ import cucumber.annotation.en.Given;
 import cucumber.annotation.en.Then; 
 import cucumber.annotation.en.When; 
 
-public class cucumberJava { 
+public class CucumberJava { 
    WebDriver driver = null; 
 	
    @Given("^I have open the browser$") 
