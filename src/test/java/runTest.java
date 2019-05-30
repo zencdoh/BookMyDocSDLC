@@ -23,6 +23,6 @@ import cucumber.api.junit.Cucumber;
  ,monochrome = false
  )
  
-public class TestRunner {
+public class CucumberReport {
  
 }
