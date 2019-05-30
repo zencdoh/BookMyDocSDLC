@@ -11,7 +11,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 /*    public class CucumberReport extends AbstractTestNGCucumberTests
     {
 }*/
-package CucumberReport; 
+package junitcucumber; 
 import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -20,7 +20,7 @@ import cucumber.api.junit.Cucumber;
  @CucumberOptions(format = (features = {/src/test/java/features/}, format = {" json :target/cucumber.json"}, glue = "steps")
 )*/
  
-public class CucumberReport {
+public class junitcucumber {
  
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -32,5 +32,5 @@ tags={"@automated"},
 plugin={"json:src/test/cucumber.json"}
 )
 
-public class CucumberReport { }
+public class junitcucumber { }
 }
