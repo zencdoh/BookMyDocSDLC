@@ -20,7 +20,6 @@ import cucumber.api.junit.Cucumber;
  @CucumberOptions(format = (features = {/src/test/java/features/}, format = {" json :target/cucumber.json"}, glue = "steps")
 )*/
  
-public class junitcucumber {
  
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -28,7 +27,6 @@ dryRun=true,
 strict=true,
 features={"/src/test/java/features/user.feature"},
 glue={"stepDefinition"},
-tags={"@automated"},
 plugin={"json:src/test/cucumber.json"}
 )
 
