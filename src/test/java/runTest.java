@@ -1,34 +1,12 @@
-/*package CucumberReport; 
-import org.junit.runner.RunWith;
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
-import cucumber.api.testng.AbstractTestNGCucumberTests;
-
-@RunWith(Cucumber.class)
-@CucumberOptions(
-    format = (features = {/src/test/java/features/}, format = {" json :target/cucumber.json"}, glue = "steps")
-)
-/*    public class CucumberReport extends AbstractTestNGCucumberTests
-    {
-}*/
 package CucumberReport; 
-import org.junit.runner.RunWith;
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
- 
-/*@RunWith(Cucumber.class)
- @CucumberOptions(format = (features = {/src/test/java/features/}, format = {" json :target/cucumber.json"}, glue = "steps")
-)*/
- 
- 
-@RunWith(Cucumber.class)
-@CucumberOptions(
-dryRun=true,
-strict=true,
-features={"/src/test/java/features/user.feature"},
-glue={"stepDefinition"},
-plugin={"json:src/test/cucumber.json"}
-)
 
-public class CucumberReport{ }
-}
+import org.junit.runner.RunWith; 
+import cucumber.junit.Cucumber; 
+
+@RunWith(Cucumber.class) 
+@CucumberOptions( format={"json:target/Destination/cucumber.json"}) 
+
+//When we specify json:target/Destination/cucumber.json - It will generate the JSON  
+report inside the Destination folder, in the target folder of the maven project.
+
+public class runTest {}
