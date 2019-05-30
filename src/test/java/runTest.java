@@ -8,6 +8,6 @@ import cucumber.api.CucumberOptions;
 @CucumberOptions( format={"json:target/Destination/cucumber.json"}) 
 
 //When we specify json:target/Destination/cucumber.json - It will generate the JSON  
-report inside the Destination folder, in the target folder of the maven project.
+//report inside the Destination folder, in the target folder of the maven project//
 
 public class runTest {}
