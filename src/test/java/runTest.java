@@ -31,5 +31,6 @@ glue={"stepDefinition"},
 tags={"@automated"},
 plugin={"json:src/test/cucumber.json"}
 )
-}
+
 public class CucumberReport { }
+}
