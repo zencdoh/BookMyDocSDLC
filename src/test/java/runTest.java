@@ -11,7 +11,7 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 /*    public class CucumberReport extends AbstractTestNGCucumberTests
     {
 }*/
-package junitcucumber; 
+package CucumberReport; 
 import org.junit.runner.RunWith;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -30,5 +30,5 @@ glue={"stepDefinition"},
 plugin={"json:src/test/cucumber.json"}
 )
 
-public class junitcucumber { }
+public class CucumberReport{ }
 }
