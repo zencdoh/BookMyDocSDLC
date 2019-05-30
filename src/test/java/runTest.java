@@ -17,11 +17,9 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
  
 @RunWith(Cucumber.class)
-@CucumberOptions(
- features = "Feature"
- ,glue={"stepDefinition"}
- ,monochrome = false
- )
+ @CucumberOptions(
+    format = (features = {/src/test/java/features/}, format = {" json :target/cucumber.json"}, glue = "steps")
+)
  
 public class CucumberReport {
  
